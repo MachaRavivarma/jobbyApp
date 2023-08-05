@@ -3,7 +3,6 @@ import Header from '../Header'
 import './index.css'
 
 const Home = props => {
-  console.log(props)
   const onClickFindJobs = () => {
     const {history} = props
     history.push('/jobs')

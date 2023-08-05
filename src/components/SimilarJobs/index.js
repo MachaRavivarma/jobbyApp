@@ -13,8 +13,6 @@ const SimilarJobs = props => {
     rating,
   } = similarJobData
 
-  console.log(similarJobData)
-
   return (
     <li className="similar-job-li-container">
       <div className="img-job-title-container">

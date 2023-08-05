@@ -27,7 +27,8 @@ class AboutJob extends Component {
     this.getJobData()
   }
 
-  getJobData = async () => {
+  // eslint-disable-next-line no-unused-vars
+  getJobData = async props => {
     const {match} = this.props
     const {params} = match
     const {id} = params
@@ -42,6 +43,7 @@ class AboutJob extends Component {
       headers: {Authorization: `Bearer ${jwtToken}`},
       method: 'GET',
     }
+
     const responseJobData = await fetch(jobDetailsApiUrl, optionsJobData)
     if (responseJobData.ok === true) {
       const fetchedJobData = await responseJobData.json()
@@ -198,7 +200,7 @@ class AboutJob extends Component {
         alt="failure view"
       />
       <h1>Oops! Something Went Wrong</h1>
-      <p>we cannot seem to find the page you are looking for.</p>
+      <p>We cannot seem to find the page you are looking for</p>
       <div className="btn-container-failure">
         <button
           className="failure-job-details-btn"

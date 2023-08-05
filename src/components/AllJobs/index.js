@@ -79,7 +79,7 @@ class AllJobs extends Component {
     }
     const response = await fetch(url, options)
     const data = await response.json()
-    console.log(data)
+
     if (response.ok === true) {
       const profile = data.profile_details
       const updatedProfileData = {
@@ -87,7 +87,7 @@ class AllJobs extends Component {
         profileImageUrl: profile.profile_image_url,
         shortBio: profile.short_bio,
       }
-      console.log(updatedProfileData)
+
       this.setState({
         profileData: updatedProfileData,
         apiStatus: apiStatusConstants.success,
@@ -113,7 +113,7 @@ class AllJobs extends Component {
     }
     const response = await fetch(url, options)
     const data = await response.json()
-    console.log(data)
+
     if (response.ok === true) {
       const filteredJobsList = data.jobs.map(each => ({
         id: each.id,
@@ -125,7 +125,7 @@ class AllJobs extends Component {
         rating: each.rating,
         title: each.title,
       }))
-      console.log(filteredJobsList)
+
       this.setState({
         jobsData: filteredJobsList,
         apiJobsStatus: apiStatusConstants.success,
