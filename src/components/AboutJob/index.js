@@ -193,8 +193,8 @@ class AboutJob extends Component {
     this.getJobData()
   }
 
-  renderJobFailureView = () => {
-    ;<div className="job-details-failure-view">
+  renderJobFailureView = () => (
+    <div className="job-details-failure-view">
       <img
         src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
         alt="failure view"
@@ -211,13 +211,13 @@ class AboutJob extends Component {
         </button>
       </div>
     </div>
-  }
+  )
 
-  renderJobLoadingView = () => {
-    ;<div className="job-details-loader" data-testid="Loader">
+  renderJobLoadingView = () => (
+    <div className="job-details-loader" data-testid="Loader">
       <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
     </div>
-  }
+  )
 
   renderJobDetails = () => {
     const {apiStatus} = this.state
