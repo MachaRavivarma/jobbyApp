@@ -250,7 +250,7 @@ class AllJobs extends Component {
   )
 
   onLoading = () => (
-    <div className="loader-container" data-testid="Loader">
+    <div className="loader-container" data-testid="loader">
       <Loader type="ThreeDots" height="50" width="50" color="#0b69ff" />
     </div>
   )
